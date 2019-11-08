@@ -1,10 +1,22 @@
-How to install:
-    npm i
-    cd client 
-    npm i
+## Setup:
+1. npm i
+2. cd client 
+3. npm i
 
-How to run:
-    npm start - it's starting node server
-    npm run server - it's starting nodemon server
-    npm run  - it's starting client
-    npm run dev - it's starting server and client
+## How to run:
+  - start node server
+    ```shell script
+      npm start 
+    ```
+  - start nodemon server
+    ```shell script
+      npm run server
+    ```
+  - start client
+    ```shell script
+      npm run client 
+    ```
+  - start server and client
+    ```shell script
+      npm run dev 
+    ```
