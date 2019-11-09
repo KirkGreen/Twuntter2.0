@@ -1,22 +1,33 @@
+# Twuntter 2.0 
+
 ## Setup:
-1. npm i
-2. cd client 
-3. npm i
+  - install all **back-end** modules
+    ```JavaScript
+      npm i
+    ```
+  - go to front-end directory
+    ```JavaScript
+      cd client
+    ```
+  - install all **front-end** modules
+    ```JavaScript
+      npm i
+    ```
 
 ## How to run:
   - start node server
-    ```shell script
+    ```JavaScript
       npm start 
     ```
   - start nodemon server
-    ```shell script
+    ```JavaScript
       npm run server
     ```
   - start client
-    ```shell script
+    ```JavaScript
       npm run client 
     ```
   - start server and client
-    ```shell script
+    ```JavaScript
       npm run dev 
     ```
