@@ -5,7 +5,7 @@ module.exports = {
     },
     'parser': 'babel-eslint',
     "extends": [
-        // "airbnb", it's a goal to reach in future
+        "airbnb",
         "eslint:recommended",
         "plugin:react/recommended"
     ],
@@ -40,6 +40,7 @@ module.exports = {
         }
     },
     'rules': {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/react-in-jsx-scope": "off",
         "semi": ["error", "always"],
         "quotes": ["error", "single"],
@@ -48,5 +49,6 @@ module.exports = {
             "null": "ignore"
         }],
         "react/no-string-refs": "off",
+        "max-len": [1, 120]
     },
 };

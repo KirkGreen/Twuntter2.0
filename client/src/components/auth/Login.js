@@ -7,13 +7,13 @@ import { login } from '../../actions/auth';
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
   });
 
   const { email, password } = formData;
 
   const onChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const onSubmit = async (e) => {
@@ -21,8 +21,8 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  if(isAuthenticated){
-    return <Redirect to="/dashboard"/>;
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
   }
 
 
@@ -62,14 +62,14 @@ const Login = ({ login, isAuthenticated }) => {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
 };
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(
   mapStateToProps,
-  { login }
+  { login },
 )(Login);
