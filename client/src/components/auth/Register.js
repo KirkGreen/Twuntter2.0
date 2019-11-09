@@ -22,18 +22,18 @@ const Register = ({ setAlert, register , isAuthenticated}) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if(password !== passwordConfirm) {
-      setAlert( 'Passwords do not match', 'danger' )
+      setAlert( 'Passwords do not match', 'danger' );
     }  else {
       register({
         name,
         email,
         password
       });
-    };
+    }
   };
 
     if(isAuthenticated){
-      return <Redirect to="/dashboard"/>
+      return <Redirect to="/dashboard"/>;
     }
   
   
@@ -95,7 +95,7 @@ Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
-}
+};
 
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated

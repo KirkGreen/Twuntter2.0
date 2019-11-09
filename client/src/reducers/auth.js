@@ -13,7 +13,7 @@ const initialState = {
   isAuthenticated: null,
   loading: true,
   user: null,
-}
+};
 
 export default function( state = initialState, action ) {
   const { type, payload } = action;
@@ -39,7 +39,7 @@ export default function( state = initialState, action ) {
     case AUTH_ERROR:
     case LOGIN_FAIL:
     case LOGOUT:
-      localStorage.removeItem('token')
+      localStorage.removeItem('token');
       return {
         ...state,
         token: null,
