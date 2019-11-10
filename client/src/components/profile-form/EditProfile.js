@@ -75,7 +75,7 @@ const EditProfile = ({
       </p>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Required
           </small>
           <select name="status" value={status} onChange={e => onChange(e)}>
@@ -130,7 +130,7 @@ const EditProfile = ({
           </small>
         </div>
         <div className="form-group">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Required
           </small>
           <input
@@ -156,15 +156,15 @@ const EditProfile = ({
         </div>
 
         <div className="my-2">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Optional
           </small>
           <button onClick={() => togleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
-            {!displaySocialInputs ? 'Hidde ' : 'Add '} Social Network Links
+            {displaySocialInputs ? 'Hidde ' : 'Add '} Social Network Links
           </button>
         </div>
 
-        {!displaySocialInputs && (
+        {displaySocialInputs && (
           <Fragment>
 
             <div className="form-group social-input">

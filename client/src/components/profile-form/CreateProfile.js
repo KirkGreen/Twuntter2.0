@@ -53,7 +53,7 @@ const CreateProfile = ({ createProfile, history }) => {
       </p>
       <form className="form" onSubmit={(e)=> onSubmit(e)}>
         <div className="form-group">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Required
           </small>
           <select name="status" value={status} onChange={e => onChange(e)}>
@@ -108,7 +108,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </small>
         </div>
         <div className="form-group">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Required
           </small>
           <input
@@ -134,7 +134,7 @@ const CreateProfile = ({ createProfile, history }) => {
         </div>
 
         <div className="my-2">
-          <small className="form-text text-primary">
+          <small className="form-text text-dark">
             Optional
           </small>
           <button onClick={() => togleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">

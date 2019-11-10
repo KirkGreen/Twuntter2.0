@@ -39,6 +39,7 @@
     ]
   },
   "proxy": "http://localhost:5353",
+
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",

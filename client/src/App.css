@@ -76,7 +76,11 @@ img {
 }
 
 .text-dark {
-  color: var(--dark-color);
+  color: var(--dark-color) !important;
+}
+
+.text-required {
+  color: var(--danger-color) !important;
 }
 
 /* Padding */
