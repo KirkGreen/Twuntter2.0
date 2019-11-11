@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Navbar from './components/layout/Navbar';
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Fragment>
+        <>
           <Navbar/>
           <section className='container'>
             <Route
@@ -72,7 +72,7 @@ const App = () => {
               />
             </Switch>
           </section>
-        </Fragment>
+        </>
       </Router>
     </Provider>
   );
