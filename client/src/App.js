@@ -10,6 +10,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-form/CreateProfile';
 import EditProfile from './components/profile-form/EditProfile';
 import AddExperience from './components/profile-form/AddExperience';
+import Profiles from './components/profiles/Profiles';
 import PrivateRoute from './components/routing/PrivateRoute';
 import store from './store';
 import { loadUser } from './actions/auth';
@@ -49,6 +50,11 @@ const App = () => {
                 exact
                 path="/login"
                 component={ Login }
+              />
+              <Route
+                exact
+                path="/profiles"
+                component={ Profiles }
               />
               <PrivateRoute
                 exact

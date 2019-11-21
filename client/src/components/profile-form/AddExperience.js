@@ -75,7 +75,7 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
          <div className="form-group">
-          <p><input type="checkbox" name="current" checked={current} value="" value={current} onChange={(e) => {
+          <p><input type="checkbox" name="current" checked={current} value={current} onChange={(e) => {
             setFormData({ ...formData, current: !current});
             toggleDisabled(!toDateDisabled);
           }}/>{' '} Current Job</p>
@@ -111,4 +111,4 @@ AddExperience.propTypes = {
   addExperience: PropTypes.func.isRequired,
 }
 
-export default connect(null, { addExperience })(AddExperience)
+export default connect(null, { addExperience })(withRouter(AddExperience));
