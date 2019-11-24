@@ -27,7 +27,6 @@ if (localStorage.token) {
 }
 
 const App = () => {
-
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
@@ -36,64 +35,64 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <>
-          <Navbar/>
-          <section className='container'>
+          <Navbar />
+          <section className="container">
             <Route
               exact
               path="/"
-              component={ Landing }
+              component={Landing}
             />
-            <Alert/>
+            <Alert />
             <Switch>
               <Route
                 exact
                 path="/register"
-                component={ Register }
+                component={Register}
               />
               <Route
                 exact
                 path="/login"
-                component={ Login }
+                component={Login}
               />
               <Route
                 exact
                 path="/profiles"
-                component={ Profiles }
+                component={Profiles}
               />
               <Route
                 exact
                 path="/profile/:id"
-                component={ Profile }
+                component={Profile}
               />
               <PrivateRoute
                 exact
                 path="/dashboard"
-                component={ Dashboard }
+                component={Dashboard}
               />
               <PrivateRoute
                 exact
                 path="/create-profile"
-                component={ CreateProfile }
+                component={CreateProfile}
               />
               <PrivateRoute
                 exact
                 path="/edit-profile"
-                component={ EditProfile }
+                component={EditProfile}
               />
               <PrivateRoute
                 exact
                 path="/add-experience"
-                component={ AddExperience }
+                component={AddExperience}
               />
               <PrivateRoute
                 exact
                 path="/posts"
-                component={ Posts }
+                component={Posts}
               />
               <PrivateRoute
                 exact
                 path="/posts/:id"
-                component={ Post }
+                component={Post}
               />
             </Switch>
           </section>

@@ -11,31 +11,34 @@ const Dashboard = ({
   getCurrentProfile,
   deleteAccount,
   auth: { user },
-  profile: { profile, loading }
+  profile: { profile, loading },
 }) => {
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
 
   return loading && profile == null ? (
-    <Spinner/>
+    <Spinner />
   ) : (
     <>
       <h1 className="large text-primary">
         Dashboard
-      </h1> 
+      </h1>
       <p className="lead">
-        <i className="fas fa-user-astronaut"/>
+        <i className="fas fa-user-astronaut" />
         {' '}
-        Welcome { user && user.name }!
+        Welcome
+        {' '}
+        { user && user.name }
+        !
       </p>
       {profile !== null ? (
         <>
-          <DashboardActions/>
+          <DashboardActions />
           <Experience experience={profile.experience} />
-          <div className='my-2' >
-            <button className='btn btn-danger' onClick={() => deleteAccount()} >
-              <i className='fas fa-user-minus'/>
+          <div className="my-2">
+            <button type="button" className="btn btn-danger" onClick={() => deleteAccount()}>
+              <i className="fas fa-user-minus" />
               {' '}
               Delete My Account
             </button>
@@ -44,14 +47,14 @@ const Dashboard = ({
       ) : (
         <>
           <p>You have not yet setup a profile, please add some info</p>
-          <Link to='/create-profile' className="btn btn-primary my-1">
+          <Link to="/create-profile" className="btn btn-primary my-1">
             Create Profile
           </Link>
         </>
       )}
     </>
-  )
-}
+  );
+};
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
@@ -62,10 +65,10 @@ Dashboard.propTypes = {
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  profile: state.profile
+  profile: state.profile,
 });
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile, deleteAccount }
+  { getCurrentProfile, deleteAccount },
 )(Dashboard);

@@ -6,7 +6,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  ACCOUNT_DELETED
+  ACCOUNT_DELETED,
 } from '../actions/types';
 
 const initialState = {
@@ -16,16 +16,16 @@ const initialState = {
   user: null,
 };
 
-export default function( state = initialState, action ) {
+export default function (state = initialState, action) {
   const { type, payload } = action;
 
-  switch(type){
+  switch (type) {
     case USER_LOADED:
       return {
         ...state,
         isAuthenticated: true,
         loading: false,
-        user: payload
+        user: payload,
       };
     case REGISTER_SUCCESS:
     case LOGIN_SUCCESS:
@@ -34,7 +34,7 @@ export default function( state = initialState, action ) {
         ...state,
         ...payload,
         isAuthenticated: true,
-        loading: false
+        loading: false,
       };
     case REGISTER_FAIL:
     case AUTH_ERROR:
@@ -46,7 +46,7 @@ export default function( state = initialState, action ) {
         ...state,
         token: null,
         isAuthenticated: false,
-        loading: false
+        loading: false,
       };
     default:
       return state;
