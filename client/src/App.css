@@ -478,6 +478,34 @@ button {
   padding: 0.5rem;
 }
 
+.post-input{
+  margin-top: 10px;
+  background: #EAF5FC;
+  display: flex;
+  flex-direction: row;
+}
+
+.post-input textarea{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  width: 90%;
+  height: 55px;
+  border: 1px solid #3399ff;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #3399ff;
+}
+
+:focus::-webkit-input-placeholder {
+  color: lightgray;
+}
+
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
