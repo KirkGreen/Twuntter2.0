@@ -22,7 +22,7 @@ const Posts = ({
       <p className="lead">
         <i className="fas fa-user-astronaut" />
         {' '}
-        Welcome To The Jangle!
+        Welcome To The Jungle!
       </p>
       <PostForm />
       <div className="posts">
