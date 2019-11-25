@@ -27,7 +27,8 @@ module.exports = {
     },
     'plugins': [
         'react',
-        "import"
+        "import",
+        "react-hooks"
     ],
     "settings": {
         "react": {
@@ -49,6 +50,8 @@ module.exports = {
             "null": "ignore"
         }],
         "react/no-string-refs": "off",
-        "max-len": [1, 120]
+        "max-len": [1, 120],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
     },
 };
